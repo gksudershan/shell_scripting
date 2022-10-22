@@ -1,0 +1,27 @@
+Shell scripting - https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT
+
+
+#!/bin/bash			The first line that should ideally be present in a shell script. Specifies the shell interpreter to be used for the script.
+				The character sequence #! is called shebang, hashbang, etc.,
+chmod +x file.sh		This command grants 'executable' access to file.sh
+
+Variable names should be ideally in uppercase and there MUST be NO SPACES before and after the assignment operator (=)
+NAME="Sudershan"
+
+$NAME				Retrieves the value stored in variable NAME
+read				Command to get user input
+
+Syntax for conditional:
+if [ condition ];		MUST be spaces between the square brackets and the condition
+then
+	statement
+else
+	statement
+fi
+
+Note: The assignment operator(=) is used for condition check as well but here there MUST be space around the operator (something like $VAR = "John")
+
+Syntax for for-loop:
+for VAR in ${SOME_LIST};do
+	COMMANDS
+done
