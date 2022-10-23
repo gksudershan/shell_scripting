@@ -4,8 +4,10 @@ Shell scripting - https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGM
 #!/bin/bash			The first line that should ideally be present in a shell script. Specifies the shell interpreter to be used for the script.
 				The character sequence #! is called shebang, hashbang, etc.,
 chmod +x file.sh		This command grants 'executable' access to file.sh
+				Note: I often got confused with the order of # and ! and then I found that remembering "hashbang" helped
 
 Variable names should be ideally in uppercase and there MUST be NO SPACES before and after the assignment operator (=)
+
 NAME="Sudershan"
 
 $NAME				Retrieves the value stored in variable NAME
@@ -25,3 +27,36 @@ Syntax for for-loop:
 for VAR in ${SOME_LIST};do
 	COMMANDS
 done
+
+seq				Command that prints a range of numbers (e.g seq 1 25 - prints numbers from 1 to 25)
+ping				Command that checks the ability of a machine to communicate with another machine in a network (see "man ping" for more info)
+subnet				a subdivision of a larger network
+
+openssl				This is a cmd line tool that has many security and cryptography related functionalies
+rand				This command generates random bytes
+base64				One of many encoding formats/algorithms available in openssl toolkit (Again you can always do a "man COMMAND" to learn more)
+
+Syntax for functions:
+function printHello(){
+	echo "Hello"
+}
+
+Positional arguments:
+
+These are arguments that we pass when we run a script on the terminal. These start from $0, where $0 is just the name of the script we type in 
+
+Here's an example to make this clear. Let's say we have a script file, some_script.sh as follows:
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+#!/bin/bash
+
+echo "The name of the script is $0"
+
+echo "Your name is $1"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+So now when you run this script and pass an additional argument "Walter", you will get the following output
+test123@DESKTOP-L8SS0JR:~$ ./some_script.sh Walter
+The name of the script is some_script.sh
+Your name is Walter 
