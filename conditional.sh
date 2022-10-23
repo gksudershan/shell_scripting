@@ -6,5 +6,5 @@ if [ $NAME = "Henry" ];
 then
 	echo "Welcome $NAME"
 else
-	echo "Permission denied"
+	echo "Permission denied, only Henry is welcome"
 fi
